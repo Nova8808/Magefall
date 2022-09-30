@@ -167,33 +167,7 @@ public class Basics : MonoBehaviour
 
             end_game_once = true;
         }
-        //if (Main_Game_Timer > Game_Length && !end_game_once)
-        //{
-        //    GameObject center_crystal = GameObject.Find("CenterCrystal");
-        //    Vector3 crystal_pos = center_crystal.transform.position;
-        //    Quaternion crystal_rot = center_crystal.transform.rotation;
-        //    Destroy(center_crystal);
-        //    crystal_fract_inst = Instantiate(Crystal_Fracture, crystal_pos, crystal_rot);
-        //    end_game_once = true;
 
-        //}
-        //if (Main_Game_Timer > Game_Length + 8)
-        //{
-        //    Time.timeScale = 0;
-        //    Main_Camera.transform.LookAt(crystal_fract_inst.transform);
-        //    //endgame popup you won +100 crystals
-        //} else if (Main_Game_Timer >= Game_Length)
-        //{
-        //    Main_Camera.transform.parent = null;
-        //    Main_Camera.transform.GetComponent<CameraController>().enabled = false;
-        //    PlayerStats.instance.player_current_shield = PlayerStats.instance.player_max_shield;
-
-        //    //Main_Camera.transform.rotation = Quaternion.Lerp(Main_Camera.transform.rotation, Quaternion.LookRotation())
-        //    //Vector3 direction = crystal_fract_inst.transform.position - Main_Camera.transform.position;
-        //    Quaternion toRotation = Quaternion.LookRotation(crystal_fract_inst.transform.position - Main_Camera.transform.position);
-        //    Main_Camera.transform.rotation = Quaternion.Lerp(Main_Camera.transform.rotation, toRotation, 5 * Time.deltaTime);
-        //    //Main_Camera.transform.rotation = Quaternion.RotateTowards(Main_Camera.transform.rotation, Quaternion.LookRotation(direction), Time.deltaTime * 1);
-        //}
 
     }
 
