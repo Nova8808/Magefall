@@ -70,15 +70,10 @@ public class Elemental_mob : MonoBehaviour, IdamageableStatus<string, int>
         distance = Vector3.Distance(Basics.instance.Player.transform.position, transform.position);
         if (ground_check)
         {
-            //rb.MovePosition(Vector3.down * 4 * Time.deltaTime *5);
-            ////transform.Translate(Vector3.down * 2 * Time.deltaTime);
-            //if (current_health > 0)
-            //{
+
             rb.velocity += Vector3.down;
         }
-        //}
-        //else rb.velocity += Vector3.down * 2;
-        //Debug.Log(rb.velocity.magnitude);
+
 
 
         //Get in range
@@ -92,13 +87,8 @@ public class Elemental_mob : MonoBehaviour, IdamageableStatus<string, int>
 
             }
 
-            //Debug.Log(Mathf.Abs(rb.velocity.normalized.z));   
-            //can put bool ismoving to have it do run animation when moving and then go back to idle/ready when not
-
-            //rb.velocity += (transform.forward * move_speed * Time.deltaTime);
-            //rb.velocity += new Vector3(0, 0, move_speed);
         }
-        //else animator.SetFloat("Movement", 0);
+
 
         if (timescale_multi != 0)
         {
@@ -129,7 +119,6 @@ public class Elemental_mob : MonoBehaviour, IdamageableStatus<string, int>
             animator.SetFloat("Movement", Mathf.SmoothStep(0, .5f, 1));
         }
         else animator.SetFloat("Movement", Mathf.SmoothStep(0, 1, 1));
-        //animator.SetFloat("Movement", Mathf.Abs(rb.velocity.magnitude));
 
         //Set animator based on speed, rb velocity?
         //animator.SetFloat("Speed", golem_speed);
@@ -150,20 +139,7 @@ public class Elemental_mob : MonoBehaviour, IdamageableStatus<string, int>
         
         //isAttacking = true;
         }
-        //TRANSLATE THIS TO c# its to check line of sight
-        //var hit : RaycastHit;
-        //var rayDirection = player.position - transform.position;
-        //if (Physics.Raycast(transform.position, rayDirection, hit))
-        //{
-        //    if (hit.transform == player)
-        //    {
-        //        // enemy can see the player!
-        //    }
-        //    else
-        //    {
-        //        // there is something obstructing the view
-        //    }
-        //}
+
 
         
 
@@ -183,16 +159,11 @@ public class Elemental_mob : MonoBehaviour, IdamageableStatus<string, int>
         }
         else
         {
-            //Vector3 Targetposition = new Vector3(Basics.instance.Player.transform.position.x, transform.position.y, Basics.instance.Player.transform.position.z);
-            //transform.LookAt(Targetposition);
+
             transform.LookAt(Basics.instance.Player.transform);
         }
 
-        //if (float_damage_inst != null)
-        //{
-        //    //float_damage_inst.transform.LookAt(Basics.instance.Main_Camera.transform);
-        //    float_damage_inst.transform.rotation = Quaternion.LookRotation(float_damage_inst.transform.position - Basics.instance.Main_Camera.transform.position);
-        //}
+
 
         if (chargeup_instance != null)
         {
@@ -223,19 +194,6 @@ public class Elemental_mob : MonoBehaviour, IdamageableStatus<string, int>
         //}
     }
 
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    if (collision.transform.tag == "Enemy")
-    //    {
-    //        StartCoroutine(Pause_Movement());
-    //    }
-
-    //    //if (collision.transform.tag == "Terrain")
-    //    //{
-    //    //    rb.angularDrag = 10;
-    //    //}
-
-    //}
 
     public void Damage(float Spell_Damage)
     {
@@ -276,19 +234,6 @@ public class Elemental_mob : MonoBehaviour, IdamageableStatus<string, int>
         stop_moving = false;
     }
 
-    //IEnumerator Death()
-    //{
-    //    GameObject ragdoll_inst = Instantiate(red_ele_ragdoll, transform);
-    //    Destroy(gameObject);
-        
-    //    //animator.SetBool("Death", true);
-    //    yield return new WaitForSeconds(4);
-    //    //Debug.Log("Shit golem down");
-
-
-    //    Destroy(gameObject);
-    //    //Destroy(hp_bar_inst);
-    //}
 
     IEnumerator Attack()
     {
