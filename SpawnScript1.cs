@@ -25,26 +25,11 @@ public class SpawnScript1 : MonoBehaviour
         {
             spawner_array[x] = transform.GetChild(x).gameObject;
         }
-        //currently_spawned = new GameObject[spawner_array.Length];
+
 
     }
 
-    //private void Update()
-    //{
-    //    timer += Time.deltaTime;
-    //    if (timer > 6)
-    //    {
-    //        //Empty_Check();
-    //        //Debug.Log(empty_check);
-    //        timer = 0;
-    //        if (Empty_Check())
-    //        {
-    //            StartCoroutine(Rewpawn());
-    //        }
-                
 
-    //    }
-    //}
 
     public void Mob_Spawn(int time)
     {
@@ -92,31 +77,5 @@ public class SpawnScript1 : MonoBehaviour
         }
     }
 
-    //private bool Empty_Check()
-    //{
-    //    bool empty = true;
-    //    for (int x = 0; x < spawner_array.Length; x++)
-    //    {
-    //        //Debug.Log(currently_spawned[x].name);
-    //        if (currently_spawned[x] != null)
-    //        {
-    //            //Debug.Log(currently_spawned[x].name);
-    //            empty = false;
-    //        }
-
-    //        //Debug.Log("null");
-    //    }
-    //    return empty;
-
-    //}
-
-    //IEnumerator Rewpawn()
-    //{
-    //    empty_check = false;
-    //    //yield return new WaitForSeconds(5);
-    //    Mob_Spawn();
-    //    yield return null;
- 
-        
-    //}
+    
 }
