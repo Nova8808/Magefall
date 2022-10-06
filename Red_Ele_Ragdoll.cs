@@ -6,14 +6,14 @@ public class Red_Ele_Ragdoll : MonoBehaviour, IdamageableStatus<string, int>
 {
     private SkinnedMeshRenderer mesh;
     private Material[] base_material;
-    // Start is called before the first frame update
+
     void Start()
     {
         mesh = transform.GetChild(0).transform.GetComponent<SkinnedMeshRenderer>();
         base_material = new Material[1] { mesh.material };
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         
