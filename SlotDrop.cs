@@ -12,10 +12,6 @@ public class SlotDrop : MonoBehaviour, IDropHandler
     private Transform slotted_icon;
     private Transform parent_slot;
 
-    private void Start()
-    {
-        //drag_front = GameObject.Find("Drag Holder");
-    }
 
     public void OnDrop(PointerEventData eventData)
     {
@@ -29,19 +25,7 @@ public class SlotDrop : MonoBehaviour, IDropHandler
             Icon_Clone = eventData.pointerDrag.GetComponent<Fire_Icon_Drag>().Cloned_Spell_Icon;
             parent_slot = eventData.pointerDrag.GetComponent<Fire_Icon_Drag>().begin_transform;
         }
-        //if (eventData.pointerDrag.GetComponent<Frost_Icon_Drag>())
-        //{
-        //    Icon_Clone = eventData.pointerDrag.GetComponent<Frost_Icon_Drag>().Cloned_Spell_Icon;
-        //}
-        //if (eventData.pointerDrag.GetComponent<Air_Icon_Drag>())
-        //{
-        //    Icon_Clone = eventData.pointerDrag.GetComponent<Air_Icon_Drag>().Cloned_Spell_Icon;
-        //}
-        //if (eventData.pointerDrag.GetComponent<Earth_Icon_Drag>())
-        //{
-        //    Icon_Clone = eventData.pointerDrag.GetComponent<Earth_Icon_Drag>().Cloned_Spell_Icon;
-        //}
-        //------
+
 
         //for (int x =0; x < hoveredList.Count; x++)
         //{
