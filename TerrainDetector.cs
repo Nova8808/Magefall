@@ -31,11 +31,6 @@ public class TerrainDetector: MonoBehaviour
     //    Debug.Log(GetClosestCurrentTerrain(player_position.position));
     //}
 
-    //private void Update()
-    //{
-    //    Debug.Log(GetActiveTerrainTextureIdx());
-    //}
-
 
     //private Vector3 ConvertToSplatMapCoordinate(Vector3 worldPosition)
     //{
